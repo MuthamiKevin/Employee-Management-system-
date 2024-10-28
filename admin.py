@@ -526,6 +526,11 @@ class AdminPanel:
     def run(self):
         self.admin_panel.mainloop()
 
+def accept_leave_request(self):
+    if not self.leave_balance_sufficient(employee_id):
+        messagebox.showerror("Insufficient Leave Balance")
+        return
+    # Approval process here...
 
 if __name__ == "__main__":
     admin_app = AdminPanel()
