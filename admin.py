@@ -5,6 +5,13 @@ from tkcalendar import DateEntry
 from PIL import ImageTk
 from datetime import datetime
 
+class AdminPanel:
+    def __init__(self, role):
+        self.role = role
+        # Only admins can delete employees, for example
+        if self.role == "Admin":
+            self.delete_employee_button = tk.Button(delete_employee_tab, text="Delete Employee", command=self.delete_employee)
+            self.delete_employee_button.pack()
 
 class AdminViewProjects:
     def __init__(self):
