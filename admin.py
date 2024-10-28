@@ -531,6 +531,15 @@ def accept_leave_request(self):
         messagebox.showerror("Insufficient Leave Balance")
         return
     # Approval process here...
+def export_data_to_csv(self, table_name):
+    conn = sqlite3.connect("employeedata.db")
+    cursor = conn.cursor()
+    cursor.execute(f"SELECT * FROM {table_name}")
+    data = cursor.fetchall()
+    with open(f"{table_name}.csv", "w", newline='') as f:
+        writer = csv.writer(f)
+        writer.writerows(data)
+    conn.close()
 
 if __name__ == "__main__":
     admin_app = AdminPanel()
