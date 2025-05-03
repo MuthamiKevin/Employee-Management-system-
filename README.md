@@ -7,16 +7,13 @@ simple employee management system
 
 - Start the development server.
     ```
-        python manage.py runserver
-        
+        python manage.py runserver  
 - Create new database migrations.
     ```
         python manage.py makemigrations
-    
 - Apply database migrations.
     ```
-        python manage.py migrate
-        
+        python manage.py migrate   
 - Create a superuser.
     ```
         python manage.py createsuperuser
