@@ -500,4 +500,6 @@ class EmployeePanel:
     def submit_project(self):
         AssignProjectForm(self.username)
         
-
+if __name__ == "__main__":
+    app = EmployeePanel('Username')
+    app.run()
