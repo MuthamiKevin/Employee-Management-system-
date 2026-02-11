@@ -240,11 +240,7 @@ class ApplyLeaveForm:
         # Button to check leave request status
         tk.Button(self.root, text="Check Status", command=self.check_leave_status).grid(row=4, column=0, columnspan=2, pady=10)
 
-    def submit_leave(self):
-        reason = self.reason_entry.get()
-        start_date = self.start_date_entry.get()
-        end_date = self.end_date_entry.get()
-
+    
         if not all((reason, start_date, end_date)):
             messagebox.showerror("Error", "All fields must be filled.")
             return
